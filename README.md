@@ -1,6 +1,6 @@
 # Docker usage
 
-Arch does not ship with `virt-win-reg` so I wrapped everything required in a container, only exposing the drive to the application.
+Arch does not provide any way to obtain `virt-win-reg`, which is required by this utility. I wrapped everything required in a container based on Ubuntu 22.04. The utility only needs access to the Windows disk.
 
 `docker run -it --rm -v /your/drive/directory:/drives/ ghcr.io/jrcichra/kvm-mergeide /drives/windowsxp-file.img`
 
@@ -20,6 +20,7 @@ More:
 
 Tested on:
 
+- Windows XP SP3
 - Windows Server 2003
 - Windows Server 2008 R2
 
